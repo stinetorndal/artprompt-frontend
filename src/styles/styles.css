@@ -132,3 +132,29 @@ h1,
     grid-template-columns: 1fr; /* Kun 1 kolonne, så kortene står under hinanden */
   }
 }
+
+/* --- Kortenes farver (variant) --- */
+
+/* Mørkegrønt kort med lys tekst */
+.feature-card--primary {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+}
+
+/* Lysegrønt kort med mørk tekst */
+.feature-card--accent {
+  background-color: var(--color-accent);
+  color: var(--color-text);
+}
+
+/* Lyst kort med mørk tekst */
+.feature-card--light {
+  background-color: #fffaf5;
+  color: var(--color-text);
+}
+
+/* Overskriften i kortet får samme farve som kortets tekst.
+   Ellers ville den mørkegrønne overskrift forsvinde på det mørkegrønne kort */
+.feature-card h2 {
+  color: inherit;
+}
