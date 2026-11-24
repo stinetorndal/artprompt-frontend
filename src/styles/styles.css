@@ -1,0 +1,86 @@
+/* ============================================
+   ArtPrompt-styling
+   Fonte: Gochi Hand (overskrifter) og Nunito (tekst)
+   ============================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Nunito:wght@400;600;700&display=swap");
+
+/* --- Farver samlet ét sted, så de er nemme at ændre --- */
+:root {
+  --color-background: #eddcce;
+  --color-primary: #032c19;
+  --color-accent: #869f4e;
+  --color-text: #031707;
+
+  --font-heading: "Gochi Hand", cursive;
+  --font-body: "Nunito", Arial, sans-serif;
+
+  --radius: 12px;
+}
+
+/* --- Hele siden --- */
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Overskrifter --- */
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+/* --- Header: toppen af siden --- */
+header {
+  display: flex; /* Børnene (logo og nav) lægger sig på én række */
+  justify-content: space-between; /* Logo helt til venstre, nav helt til højre */
+  align-items: center; /* Logo og knapper står på linje lodret */
+  flex-wrap: wrap; /* På smal skærm må nav hoppe ned under logoet */
+  gap: 1rem; /* Afstand mellem logo og nav, hvis de hopper ned */
+  padding: 1rem 2rem; /* Luft inde i headeren: top/bund og venstre/højre */
+  background-color: var(--color-primary);
+}
+
+/* --- Logoet i headeren --- */
+.logo {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--color-background); /* Lys tekst på mørk header */
+  text-decoration: none; /* Fjerner understregningen fra linket */
+}
+
+/* --- Listen med knapper i headeren --- */
+header nav ul {
+  display: flex; /* Knapperne står ved siden af hinanden i stedet for under hinanden */
+  gap: 0.75rem; /* Afstand mellem knapperne */
+  list-style: none; /* Fjerner prikkerne foran punkterne */
+  margin: 0; /* Fjerner browserens standard-luft omkring listen */
+  padding: 0;
+}
+
+/* --- Selve knapperne i headeren --- */
+header nav a {
+  display: inline-block; /* Gør, at padding virker rigtigt på et link */
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px; /* Meget runde hjørner, så knappen bliver pilleformet */
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* --- Når musen er over en knap --- */
+header nav a:hover {
+  background-color: var(--color-background);
+}
