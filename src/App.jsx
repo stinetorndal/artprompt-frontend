@@ -1,4 +1,6 @@
+import FeatureCard from './components/FeatureCard'
 import Header from './components/Header'
+
 
 
 function App() {
@@ -6,7 +8,11 @@ function App() {
     <div>
       <Header />
       <h1>ArtPrompt</h1>
-
+      <div className="feature-cards">
+        <FeatureCard path="/wordprompts" headline="Ordprompter" text="Få to tilfældige ord fra hver sin kategori" />
+        <FeatureCard path="/color" headline="Farver" text="Få ti tilfældige billeder fra Unsplash ud fra valgt farve" />
+        <FeatureCard path="/painters" headline="Malerier" text="Få fem tilfældige malerier fra Rijksmuseum ud fra valgt kunstner" />
+      </div>
     </div>
   )
 }

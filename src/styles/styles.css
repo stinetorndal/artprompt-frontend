@@ -84,3 +84,51 @@ header nav a {
 header nav a:hover {
   background-color: var(--color-background);
 }
+
+/* --- Indholdet under headeren --- */
+main,
+h1,
+.feature-cards {
+  max-width: 1100px; /* Indholdet bliver ikke bredere end 1100px */
+  margin-left: auto; /* auto til venstre og højre centrerer indholdet */
+  margin-right: auto;
+  padding: 0 1.5rem; /* Lidt luft ind til kanten på små skærme */
+}
+
+/* --- Rammen omkring de tre kort --- */
+.feature-cards {
+  display: grid; /* Kortene lægges i et gitter */
+  grid-template-columns: repeat(3, 1fr); /* 3 lige brede kolonner */
+  gap: 1.75rem; /* Afstand mellem kortene */
+}
+
+/* --- Ét kort --- */
+.feature-card {
+  display: flex; /* Indholdet i kortet ... */
+  flex-direction: column; /* ... står under hinanden */
+  gap: 0.75rem;
+  min-height: 200px;
+  padding: 2rem;
+  border-radius: 28px;
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  text-decoration: none; /* Fjerner understregningen fra linket */
+}
+
+/* --- Overskriften i kortet --- */
+.feature-card h2 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+/* --- Teksten i kortet --- */
+.feature-card p {
+  margin: 0;
+}
+
+/* --- Media query: på skærme smallere end 800px --- */
+@media (max-width: 800px) {
+  .feature-cards {
+    grid-template-columns: 1fr; /* Kun 1 kolonne, så kortene står under hinanden */
+  }
+}
