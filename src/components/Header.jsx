@@ -1,15 +1,16 @@
-// header med logo ArtPrompt til venstre. Til højre to knapper med login  + opret
-// knapper skal være med links a href...
+import { Link } from 'react-router'
 
+// header med logo ArtPrompt til venstre. Til højre to knapper med login  + opret
+// knapper skal være med links Link ...
 
 function Header() {
     return (
         <header>
-            <a href="/" className="logo">ArtPrompt</a>
+            <Link to="/" className="logo">ArtPrompt</Link>
             <nav>
                 <ul>
-                    <li><a href="#">Log på</a></li>
-                    <li><a href="#">Opret bruger</a></li>
+                    <li><Link to="/login">Log på</Link></li>
+                    <li><Link to="/register">Opret bruger</Link></li>
                 </ul>
             </nav>
         </header>

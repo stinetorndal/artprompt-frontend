@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router'
 
 // Giver path, headline, text fra props, så de kan bruges direkte
