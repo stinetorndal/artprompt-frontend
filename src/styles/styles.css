@@ -158,3 +158,82 @@ h1,
 .feature-card h2 {
   color: inherit;
 }
+
+/* --- Fejlbesked --- */
+.error-message {
+  color: #b3261e; /* Mørkerød, der er nem at læse på lys baggrund */
+  font-weight: 600;
+  margin: 0;
+}
+
+/* --- Formular-kort: Log på og Opret bruger --- */
+.form-card {
+  max-width: 480px; /* Kortet bliver ikke bredere end 480px */
+  margin: 3rem auto; /* auto til venstre og højre centrerer kortet */
+  padding: 2.5rem;
+  border-radius: 28px; /* Samme runde hjørner som kortene på forsiden */
+  background-color: #fffaf5; /* Samme farve som det lyse kort på forsiden */
+}
+
+/* Overskriften i kortet: ingen ekstra luft fra den generelle h1-regel */
+.form-card h1 {
+  margin: 0 0 1.5rem;
+  padding: 0;
+  font-size: 3rem;
+}
+
+/* Felter og knapper står under hinanden med luft imellem */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.form label {
+  font-weight: 700;
+}
+
+.form input {
+  padding: 0.9rem 1rem;
+  margin-bottom: 0.8rem;
+  border: 2px solid var(--color-primary);
+  border-radius: 14px;
+  font-family: inherit; /* Samme skrifttype som resten af siden */
+  font-size: 1rem;
+}
+
+/* --- Knapper, der kan genbruges overalt --- */
+.button-primary,
+.button-secondary {
+  padding: 1rem;
+  border-radius: 999px; /* Pilleformet, ligesom knapperne i headeren */
+  font-family: inherit;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer; /* Hånden vises, når musen er over knappen */
+}
+
+/* Hovedknappen: fyldt med primærfarven */
+.button-primary {
+  border: none;
+  background-color: var(--color-primary);
+  color: var(--color-background);
+}
+
+/* Den mindre vigtige knap: kun en kant */
+.button-secondary {
+  border: 2px solid var(--color-primary);
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+/* Linjen med "Ingen bruger endnu?" under formularen */
+.form-footer {
+  margin: 1.5rem 0 0;
+  text-align: center;
+}
+
+.form-footer a {
+  color: var(--color-primary);
+  font-weight: 700;
+}

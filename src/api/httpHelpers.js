@@ -48,4 +48,4 @@ async function getErrorMessage(res) {
   }
 }
 
-export { makeOptions, getErrorMessage };
+export { makeOptions, handleHttpErrors };
